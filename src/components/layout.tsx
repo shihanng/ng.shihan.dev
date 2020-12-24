@@ -1,4 +1,4 @@
-import { Link } from "gatsby"
+import { graphql, Link, useStaticQuery } from "gatsby"
 import React from "react"
 import tw, { GlobalStyles } from "twin.macro"
 
@@ -13,11 +13,23 @@ const ListLink = ({ to, children }) => (
 )
 
 export default function Layout({ children }) {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }
+    `
+  )
+
   return (
     <>
       <GlobalStyles />
       <Container>
-        <h3>ng.shihan.dev</h3>
+        <h3>{data.site.siteMetadata.title}</h3>
         <Ul>
           <ListLink to="/">Home</ListLink>
           <ListLink to="/writing/">Writing</ListLink>
