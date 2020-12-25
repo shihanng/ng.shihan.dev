@@ -3,7 +3,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import tw, { GlobalStyles } from "twin.macro"
 
-const Container = tw.div`flex flex-col h-screen`
+const Container = tw.div`flex flex-col h-screen font-sans`
 const Page = tw.div`flex-1 max-w-2xl mx-auto px-10`
 const Li = tw.li`inline-block ml-3`
 const Ul = tw.ul`list-none float-right`
