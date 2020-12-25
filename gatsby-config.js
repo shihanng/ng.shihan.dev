@@ -8,5 +8,5 @@ module.exports = {
   siteMetadata: {
     title: `Shi Han NG`,
   },
-  plugins: [`gatsby-plugin-emotion`],
+  plugins: [`gatsby-plugin-emotion`, `gatsby-plugin-react-helmet`],
 }

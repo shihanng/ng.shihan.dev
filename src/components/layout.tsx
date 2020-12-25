@@ -1,5 +1,6 @@
 import { graphql, Link, useStaticQuery } from "gatsby"
 import React from "react"
+import { Helmet } from "react-helmet"
 import tw, { GlobalStyles } from "twin.macro"
 
 const Container = tw.div`flex flex-col h-screen`
@@ -29,17 +30,20 @@ export default function Layout({ children }) {
   )
 
   return (
-    <Container>
-      <GlobalStyles />
-      <Header>{data.site.siteMetadata.title}</Header>
-      <Page>
-        <Ul>
-          <ListLink to="/">Home</ListLink>
-          <ListLink to="/writing/">Writing</ListLink>
-        </Ul>
-        {children}
-      </Page>
-      <Footer>&copy; Shi Han NG</Footer>
-    </Container>
+    <>
+      <Helmet title={data.site.siteMetadata.title} defer={false} />
+      <Container>
+        <GlobalStyles />
+        <Header>{data.site.siteMetadata.title}</Header>
+        <Page>
+          <Ul>
+            <ListLink to="/">Home</ListLink>
+            <ListLink to="/writing/">Writing</ListLink>
+          </Ul>
+          {children}
+        </Page>
+        <Footer>&copy; Shi Han NG</Footer>
+      </Container>
+    </>
   )
 }
