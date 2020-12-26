@@ -4,14 +4,14 @@ import { Helmet } from "react-helmet"
 import tw, { GlobalStyles, styled } from "twin.macro"
 import Contact from "../components/contact"
 
-const Container = tw.div`font-sans flex flex-col h-screen text-gray-800 max-w-full mx-5 md:mx-auto md:max-w-3xl`
+const Container = tw.div`font-sans flex flex-col h-screen text-gray-800 max-w-full px-5 mx-auto md:max-w-4xl`
 const Page = tw.div`flex-1 prose prose-lg py-7 max-w-max`
-const Ul = tw.ul`flex flex-row`
+const Ul = tw.ul`sm:flex sm:flex-row`
 const Header = tw.header`text-center py-5 font-serif text-2xl`
 const Footer = tw.footer`text-center py-5 font-serif text-sm`
 const Li = styled.li`
-  ${tw`ml-5 font-semibold text-gray-500`}
-  & .hello {
+  ${tw`py-2 font-semibold text-gray-500 sm:ml-5`}
+  & .active {
     ${tw`text-purple-700`}
   }
   &:hover {
@@ -27,14 +27,14 @@ const ListLink: React.FC<ListLinkProps> = ({ to, children }) => (
   <Li>
     <Link
       to={to}
-      getProps={({ isCurrent }) => (isCurrent ? { className: "hello" } : {})}
+      getProps={({ isCurrent }) => (isCurrent ? { className: "active" } : {})}
     >
       {children}
     </Link>
   </Li>
 )
 
-const Nav = tw.nav`flex justify-end`
+const Nav = tw.nav`flex justify-center sm:justify-end`
 
 const NavBar: React.FC = () => {
   return (
