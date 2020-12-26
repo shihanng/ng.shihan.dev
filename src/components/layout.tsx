@@ -48,7 +48,12 @@ const Layout: React.FC = ({ children }) => {
           {children}
         </Page>
         <Footer>
-          <div>&copy; Shi Han NG</div>
+          <div>
+            &copy; Shi Han NG |{" "}
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/">
+              CC BY-NC 4.0
+            </a>
+          </div>
           <Contact />
         </Footer>
       </Container>
