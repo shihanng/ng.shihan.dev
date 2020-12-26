@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["Fira Sans", ...defaultTheme.fontFamily.sans],
+        serif: ["Bitter", ...defaultTheme.fontFamily.serif],
       },
     },
   },
