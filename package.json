@@ -30,6 +30,7 @@
     "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
     "@types/react": "^17.0.0",
+    "@types/react-helmet": "^6.1.0",
     "gatsby-plugin-emotion": "^5.1.0",
     "prettier": "2.2.1",
     "tailwindcss": "^2.0.2",
