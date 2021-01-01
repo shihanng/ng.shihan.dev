@@ -1,5 +1,4 @@
 import React from "react"
-import Header from "../components/header"
 import Layout from "../components/layout"
 import tw, { styled } from "twin.macro"
 import { FaDev } from "@react-icons/all-files/fa/FaDev"
@@ -87,8 +86,7 @@ const data: { icon: React.ReactNode; url: string; title: string }[] = [
 
 export default function Writing() {
   return (
-    <Layout>
-      <Header text="Writing" />
+    <Layout header="Writing">
       <List>
         {data.map(({ url, icon, title }) => (
           <ListItem icon={icon} url={url}>

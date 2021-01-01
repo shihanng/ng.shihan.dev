@@ -1,13 +1,14 @@
 import React from "react"
+import tw from "twin.macro"
+
+const H1 = tw.h1`font-semibold prose prose-2xl`
 
 export interface Props {
-  text: string
+  title: string
 }
 
-const Header: React.FC<Props> = (props: Props) => {
-  const { text } = props
-
-  return <h1>{text}</h1>
+const PageTitle: React.FC<Props> = ({ title }) => {
+  return <H1>{title}</H1>
 }
 
-export default Header
+export default PageTitle

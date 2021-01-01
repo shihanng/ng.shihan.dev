@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet"
 import tw, { GlobalStyles, styled } from "twin.macro"
 import Button from "../components/button"
 import Contact from "../components/contact"
+import PageTitle from "../components/header"
 
 const Container = tw.div`font-sans flex flex-col min-h-screen text-gray-800 max-w-full`
 const Header = tw.header`flex place-content-between sm:place-content-center px-5 items-center bg-white relative z-20 h-16 text-center pt-4 font-serif text-2xl`
@@ -84,7 +85,11 @@ const NavBar: React.FC<NavBarProps> = ({ open }) => {
   )
 }
 
-const Layout: React.FC = ({ children }) => {
+interface LayoutProps {
+  header?: string
+}
+
+const Layout: React.FC<LayoutProps> = ({ header, children }) => {
   const [open, setOpen] = React.useState(false)
 
   const data = useStaticQuery(
@@ -117,6 +122,7 @@ const Layout: React.FC = ({ children }) => {
           <NavBar open={open} />
         </div>
         <div tw="z-0 flex-grow my-5 max-w-max px-5 mx-auto md:max-w-4xl">
+          {header && <PageTitle title={header} />}
           {children}
         </div>
         <Footer>
