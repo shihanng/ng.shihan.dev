@@ -1,7 +1,7 @@
-import React from "react"
-import Layout from "../components/Layout"
-import tw, { styled } from "twin.macro"
 import { FaDev } from "@react-icons/all-files/fa/FaDev"
+import React from "react"
+import tw, { styled } from "twin.macro"
+import Layout from "../components/Layout"
 
 const List = tw.ul`
 list-none
@@ -20,7 +20,7 @@ type ListItemProps = {
 
 const ListItem: React.FC<ListItemProps> = ({ icon, url, children }) => {
   const Li = styled.li`
-    ${tw`flex mb-1 pl-7`}
+    ${tw`flex mb-1 pl-7 hover:text-primary`}
     &:before,
     & > ${IconWrapper} {
       ${tw`absolute left-0`}

@@ -6,17 +6,19 @@ import Button from "../components/Button"
 import Contact from "../components/Contact"
 import PageTitle from "../components/PageTitle"
 
-const Container = tw.div`font-sans flex flex-col min-h-screen text-gray-800 max-w-full`
+const Container = styled.div`
+  ${tw`flex flex-col max-w-full min-h-screen font-sans text-gray-800`}
+  .active {
+    ${tw`hover:text-secondary text-secondary`}
+  }
+  a {
+    ${tw`hover:text-primary`}
+  }
+`
 const Header = tw.header`flex place-content-between sm:place-content-center px-5 items-center bg-white relative z-20 h-16 text-center pt-4 font-serif text-2xl`
 const Footer = tw.footer`text-center my-4 font-serif text-sm px-5`
 const Li = styled.li`
-  ${tw`py-2 font-semibold text-center text-gray-500 sm:ml-5`}
-  & .active {
-    ${tw`text-purple-700`}
-  }
-  &:hover {
-    ${tw`text-gray-800`}
-  }
+  ${tw`py-2 font-semibold text-center sm:ml-5`}
 `
 const useOnClickOutside = (
   ref: React.RefObject<HTMLElement>,
