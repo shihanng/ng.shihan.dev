@@ -2,9 +2,9 @@ import { graphql, Link, useStaticQuery } from "gatsby"
 import React from "react"
 import { Helmet } from "react-helmet"
 import tw, { GlobalStyles, styled } from "twin.macro"
-import Button from "../components/button"
-import Contact from "../components/contact"
-import PageTitle from "../components/header"
+import Button from "../components/Button"
+import Contact from "../components/Contact"
+import PageTitle from "../components/PageTitle"
 
 const Container = tw.div`font-sans flex flex-col min-h-screen text-gray-800 max-w-full`
 const Header = tw.header`flex place-content-between sm:place-content-center px-5 items-center bg-white relative z-20 h-16 text-center pt-4 font-serif text-2xl`

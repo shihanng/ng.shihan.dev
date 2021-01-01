@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import tw, { styled } from "twin.macro"
 import { FaDev } from "@react-icons/all-files/fa/FaDev"
 
