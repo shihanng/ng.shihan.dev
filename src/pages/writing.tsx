@@ -20,7 +20,7 @@ type ListItemProps = {
 
 const ListItem: React.FC<ListItemProps> = ({ icon, url, children }) => {
   const Li = styled.li`
-    ${tw`flex pl-6`}
+    ${tw`flex mb-1 pl-7`}
     &:before,
     & > ${IconWrapper} {
       ${tw`absolute left-0`}
