@@ -121,7 +121,7 @@ const Layout: React.FC<LayoutProps> = ({ header, children }) => {
         <div tw="z-10" ref={node}>
           <NavBar open={open} />
         </div>
-        <div tw="z-0 flex-grow my-5 max-w-max px-5 mx-auto md:max-w-4xl">
+        <div tw="z-0 flex-grow my-5 w-full px-5 mx-auto md:max-w-4xl">
           {header && <PageTitle title={header} />}
           {children}
         </div>
