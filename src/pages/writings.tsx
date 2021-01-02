@@ -1,4 +1,7 @@
 import { FaDev } from "@react-icons/all-files/fa/FaDev"
+import { FaMedium } from "@react-icons/all-files/fa/FaMedium"
+import { SiHatenabookmark } from "@react-icons/all-files/si/SiHatenabookmark"
+
 import React from "react"
 import tw, { styled } from "twin.macro"
 import Layout from "../components/Layout"
@@ -82,11 +85,32 @@ const data: { icon: React.ReactNode; url: string; title: string }[] = [
       "https://dev.to/shihanng/looking-into-postgresql-db-s-tables-of-your-development-environment-1i0i",
     icon: <FaDev size="1.3em" />,
   },
+  {
+    title: "goa v2 on Google App Engine",
+    url:
+      "https://medium.com/henngeblog/goa-v2-on-google-app-engine-c3c4ab8bfbb5",
+    icon: <FaMedium size="1.3em" />,
+  },
+  {
+    title: "Switching Between Kubernetes Clusters in GKE",
+    url:
+      "https://medium.com/@shihanng/switching-between-kubernetes-clusters-in-gke-2f88c89c70f",
+    icon: <FaMedium size="1.3em" />,
+  },
+  {
+    title: "Windows Management on macOS",
+    url: "http://hde-advent-2017.hatenadiary.jp/entry/2017/12/24/000000",
+    icon: <SiHatenabookmark size="1.3em" />,
+  },
 ]
 
 export default function Writings() {
   return (
     <Layout header="Writings">
+      <p tw="mb-3">
+        Sometimes I document things that I've learned in public spaces. Here is
+        a list of articles that I've written on various platforms.
+      </p>
       <List>
         {data.map(({ url, icon, title }) => (
           <ListItem key={url} icon={icon} url={url}>
