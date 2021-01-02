@@ -7,25 +7,57 @@ import { FaKeybase } from "@react-icons/all-files/fa/FaKeybase"
 import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin"
 import { FaMedium } from "@react-icons/all-files/fa/FaMedium"
 import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter"
-import tw, { css } from "twin.macro"
+import tw from "twin.macro"
 
 const Container = tw.div`flex justify-center space-x-2 pt-2`
-const hoverStyles = css`
-  ${tw`text-gray-700`}
-`
+
+const socialContacts: {
+  link: string
+  icon: React.ReactNode
+}[] = [
+  {
+    link: "https://github.com/shihanng",
+    icon: <FaGithub title="GitHub" />,
+  },
+  {
+    link: "https://www.linkedin.com/in/shihan-ng/",
+    icon: <FaLinkedin title="LinkedIn" />,
+  },
+  {
+    link: "https://twitter.com/shihanng",
+    icon: <FaTwitter title="Twitter" />,
+  },
+  {
+    link: "https://dev.to/shihanng",
+    icon: <FaDev title="Dev" />,
+  },
+  {
+    link: "https://medium.com/@shihanng",
+    icon: <FaMedium title="Medium" />,
+  },
+  {
+    link: "https://www.instagram.com/shihanng/",
+    icon: <FaInstagram title="Instagram" />,
+  },
+  {
+    link: "https://keybase.io/shihanng",
+    icon: <FaKeybase title="Keybase" />,
+  },
+  {
+    link: "mailto:shihanng@gmail.com",
+    icon: <FaEnvelope title="Email" />,
+  },
+]
 
 export default function Contact() {
   return (
     <Container>
       <IconContext.Provider value={{ size: "2.0em" }}>
-        <FaGithub css={hoverStyles} title="GitHub" />
-        <FaLinkedin css={hoverStyles} title="LinkedIn" />
-        <FaTwitter css={hoverStyles} title="Twitter" />
-        <FaDev css={hoverStyles} title="Dev" />
-        <FaMedium css={hoverStyles} title="Medium" />
-        <FaInstagram css={hoverStyles} title="Instagram" />
-        <FaKeybase css={hoverStyles} title="Keybase" />
-        <FaEnvelope css={hoverStyles} title="Email" />
+        {socialContacts.map(({ link, icon }) => (
+          <a key={link} href={link}>
+            {icon}
+          </a>
+        ))}
       </IconContext.Provider>
     </Container>
   )
