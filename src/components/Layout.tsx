@@ -80,7 +80,7 @@ const NavBar: React.FC<NavBarProps> = ({ open }) => {
       <nav tw="px-5 mx-auto max-w-4xl">
         <Ul open={open}>
           <ListLink to="/">Home</ListLink>
-          <ListLink to="/writing/">Writing</ListLink>
+          <ListLink to="/writings/">Writings</ListLink>
         </Ul>
       </nav>
     </>

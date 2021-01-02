@@ -84,9 +84,9 @@ const data: { icon: React.ReactNode; url: string; title: string }[] = [
   },
 ]
 
-export default function Writing() {
+export default function Writings() {
   return (
-    <Layout header="Writing">
+    <Layout header="Writings">
       <List>
         {data.map(({ url, icon, title }) => (
           <ListItem key={url} icon={icon} url={url}>
