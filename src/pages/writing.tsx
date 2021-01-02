@@ -89,7 +89,7 @@ export default function Writing() {
     <Layout header="Writing">
       <List>
         {data.map(({ url, icon, title }) => (
-          <ListItem icon={icon} url={url}>
+          <ListItem key={url} icon={icon} url={url}>
             {title}
           </ListItem>
         ))}
