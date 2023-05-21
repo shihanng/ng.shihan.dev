@@ -1,4 +1,5 @@
 const preline = require("preline/plugin.js");
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -13,6 +14,9 @@ module.exports = {
         "bright-gray": {
           DEFAULT: "#393E46",
         },
+      },
+      fontFamily: {
+        hand: ['"Permanent Marker"', ...defaultTheme.fontFamily.serif],
       },
     },
   },
