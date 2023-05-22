@@ -1,5 +1,7 @@
 ---
 import "@fontsource/permanent-marker";
+import Navigation from "../components/Navigation.astro";
+const pageTitle = "Shi Han NG";
 ---
 
 <html lang="en">
@@ -8,7 +10,7 @@ import "@fontsource/permanent-marker";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>{pageTitle}</title>
   </head>
   <body>
     <div class="flex flex-col min-h-screen">
@@ -21,27 +23,9 @@ import "@fontsource/permanent-marker";
         >
           <a
             class="font-hand flex-none text-2xl font-semibold dark:text-white"
-            href="#">Shi Han NG</a
+            href="/">Shi Han NG</a
           >
-          <div
-            class="flex flex-row items-center gap-5 mt-5 sm:justify-end sm:mt-0 sm:pl-5"
-          >
-            <a class="font-medium text-blue-500" href="#" aria-current="page"
-              >Writings</a
-            >
-            <a
-              class="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
-              href="#">Projects</a
-            >
-            <a
-              class="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
-              href="#">Now</a
-            >
-            <a
-              class="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
-              href="#">Contact</a
-            >
-          </div>
+          <Navigation />
         </nav>
       </header>
 

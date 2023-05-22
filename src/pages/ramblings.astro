@@ -1,0 +1,50 @@
+---
+import "@fontsource/permanent-marker";
+import Navigation from "../components/Navigation.astro";
+const pageTitle = "Ramblings | Shi Han NG";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <div class="flex flex-col min-h-screen">
+      <header
+        class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-4 dark:bg-gray-800"
+      >
+        <nav
+          class="max-w-screen-lg w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between"
+          aria-label="Global"
+        >
+          <a
+            class="font-hand flex-none text-2xl font-semibold dark:text-white"
+            href="/">Shi Han NG</a
+          >
+          <Navigation />
+        </nav>
+      </header>
+
+      <main
+        class="container mx-auto max-w-screen-lg flex-grow text-bright-gray p-4"
+      >
+        <ul>
+          <li><a href="/posts/test/">Test post</a></li>
+        </ul>
+      </main>
+
+      <footer class="text-center w-full">
+        <div class="container mx-auto max-w-screen-lg py-4">
+          <p>&copy; 2023 Your Name. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+    <script>
+      import "preline/dist/preline.js";
+    </script>
+  </body>
+</html>
