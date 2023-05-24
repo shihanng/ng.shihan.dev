@@ -2,7 +2,14 @@
 import "@fontsource/permanent-marker";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+
+interface Props {
+  pageTitle?: string;
+}
+
 const { pageTitle } = Astro.props;
+const baseTitle = "Shi Han NG";
+const title = pageTitle ? `${pageTitle} | ${baseTitle}` : baseTitle;
 ---
 
 <html lang="en">
@@ -11,7 +18,7 @@ const { pageTitle } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
+    <title>{title}</title>
   </head>
   <body>
     <div class="flex flex-col min-h-screen">
