@@ -1,30 +1,6 @@
 ---
-import "@fontsource/permanent-marker";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-const pageTitle = "Now | Shi Han NG";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "Shi Han NG";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <div class="flex flex-col min-h-screen">
-      <Header />
-      <main
-        class="container mx-auto max-w-screen-lg flex-grow text-bright-gray p-4"
-      >
-        ...
-      </main>
-      <Footer />
-    </div>
-    <script>
-      import "preline/dist/preline.js";
-    </script>
-  </body>
-</html>
+<BaseLayout pageTitle={pageTitle}>...</BaseLayout>
