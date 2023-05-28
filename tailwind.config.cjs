@@ -20,5 +20,5 @@ module.exports = {
       },
     },
   },
-  plugins: [preline],
+  plugins: [require("@tailwindcss/typography"), preline],
 };
