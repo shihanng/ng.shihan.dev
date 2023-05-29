@@ -1,10 +1,59 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogCard from "../components/BlogCard.astro";
 const pageTitle = "Ramblings";
+
+type Blog = {
+  imgSrc?: string;
+  imgAlt?: string;
+  title: string;
+  teaser: string;
+};
+
+const blogs: Blog[] = [
+  {
+    imgSrc:
+      "https://images.unsplash.com/photo-1540575861501-7cf05a4b125a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    imgAlt: "Image Description",
+    title: "Studio by Preline",
+    teaser:
+      "Produce professional, reliable streams easily leveraging Preline's innovative broadcast studio",
+  },
+  {
+    imgSrc:
+      "https://images.unsplash.com/photo-1668906093328-99601a1aa584?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=986&q=80",
+    imgAlt: "Image Description",
+    title: "Onsite",
+    teaser:
+      "Optimize your in-person experience with best-in-class capabilities like badge printing and lead retrieval",
+  },
+  {
+    imgSrc:
+      "https://images.unsplash.com/photo-1567016526105-22da7c13161a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80",
+    imgAlt: "Image Description",
+    title: " The complete guide to OKRs",
+    teaser: " How to make objectives and key results work for your company",
+  },
+  {
+    imgSrc:
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib: rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    imgAlt: "Image Description",
+    title: "People program models",
+    teaser: "Six approaches to bringing your People strategy to life",
+  },
+];
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <ul>
-    <li><a href="/posts/test/">Test post</a></li>
-  </ul>
+  <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+    <div class="grid lg:grid-cols-2 lg:gap-y-16 gap-10">
+      {
+        blogs.map(({ imgSrc, imgAlt, title, teaser }) => (
+          <BlogCard imgSrc={imgSrc} imgAlt={imgAlt} title={title}>
+            {teaser}
+          </BlogCard>
+        ))
+      }
+    </div>
+  </div>
 </BaseLayout>
