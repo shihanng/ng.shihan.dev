@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/PostLayout.astro
+layout: ../../layouts/RamblingLayout.astro
 title: "Test post"
 pubDate: 2022-07-01
 description: "Test post"
