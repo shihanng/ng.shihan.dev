@@ -3,12 +3,13 @@ interface Props {
   imgSrc?: string;
   imgAlt?: string;
   title: string;
+  url: string;
 }
 
-const { imgSrc, imgAlt, title } = Astro.props;
+const { imgSrc, imgAlt, title, url } = Astro.props;
 ---
 
-<a class="group rounded-xl overflow-hidden" href="#">
+<a class="group rounded-xl overflow-hidden" href={url}>
   <div class="sm:flex">
     <div
       class="flex-shrink-0 relative rounded-xl overflow-hidden w-full sm:w-56 h-44 bg-gray-100"
