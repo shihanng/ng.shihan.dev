@@ -17,6 +17,7 @@ module.exports = {
         },
       },
       fontFamily: {
+        sans: ["Fira Sans", ...defaultTheme.fontFamily.sans],
         hand: ['"Permanent Marker"', ...defaultTheme.fontFamily.serif],
       },
     },
