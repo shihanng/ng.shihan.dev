@@ -1,0 +1,11 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Contacts from "../components/Contacts.astro";
+const pageTitle = "Contact";
+---
+
+<BaseLayout pageTitle={pageTitle} hasSocial={false}>
+  <div class="flex items-center justify-center my-auto">
+    <Contacts />
+  </div>
+</BaseLayout>

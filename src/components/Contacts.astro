@@ -1,0 +1,54 @@
+---
+import { Icon } from "astro-icon";
+import FooterIcon from "./FooterIcon.astro";
+
+type Contacts = {
+  iconName: string;
+  url: string;
+};
+
+const contacts: Contacts[] = [
+  {
+    url: "https://github.com/shihanng",
+    iconName: "la:github",
+  },
+  {
+    url: "https://www.linkedin.com/in/shihan-ng/",
+    iconName: "la:linkedin",
+  },
+  {
+    url: "https://twitter.com/shihanng",
+    iconName: "la:twitter",
+  },
+  {
+    url: "https://dev.to/shihanng",
+    iconName: "la:dev",
+  },
+  {
+    url: "https://medium.com/@shihanng",
+    iconName: "la:medium",
+  },
+  {
+    url: "https://www.instagram.com/shihanng/",
+    iconName: "la:instagram",
+  },
+  {
+    url: "https://keybase.io/shihanng",
+    iconName: "la:keybase",
+  },
+  {
+    url: "mailto:shihanng@gmail.com",
+    iconName: "la:envelope",
+  },
+];
+---
+
+<div class="mt-3 space-x-2">
+  {
+    contacts.map(({ iconName, url }) => (
+      <FooterIcon url={url}>
+        <Icon name={iconName} />
+      </FooterIcon>
+    ))
+  }
+</div>
