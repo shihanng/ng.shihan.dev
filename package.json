@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "lint": "prettier --write  \"**/*.{js,jsx,ts,tsx,md,mdx,astro}\" && eslint --fix \"src/**/*.{js,ts,jsx,tsx,astro}\""
   },
   "keywords": [],
   "author": "",
@@ -14,5 +15,13 @@
   "description": "",
   "dependencies": {
     "astro": "^4.13.4"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^8.1.0",
+    "eslint": "^9.9.0",
+    "eslint-plugin-astro": "^1.2.3",
+    "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.6.6"
   }
 }
