@@ -1,6 +1,5 @@
 ---
-// Welcome to Astro! Everything between these triple-dash code fences
-// is your "component frontmatter". It never runs in the browser.
+import Navigation from "../components/Navigation.astro";
 console.log("This runs in your terminal, not the browser!");
 ---
 
@@ -8,9 +7,7 @@ console.log("This runs in your terminal, not the browser!");
     some magic sprinkled in to help you build great templates. -->
 <html>
   <body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
+    <Navigation />
     <h1>Hello, World!</h1>
   </body>
 </html>
