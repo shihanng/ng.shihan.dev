@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Footer from "../components/Footer.astro";
 import Navigation from "../components/Navigation.astro";
 
 const pageTitle = "About Me";
@@ -72,6 +73,7 @@ const skillColor = "navy";
         <p>My goal is not 3 days.</p>
       )
     }
+    <Footer />
   </body>
 </html>
 <style define:vars={{ skillColor }}>
