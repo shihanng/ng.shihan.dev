@@ -1,0 +1,16 @@
+---
+import type { MarkdownLayoutProps } from "astro";
+import BaseLayout from "./BaseLayout.astro";
+
+type Props = MarkdownLayoutProps<{
+  title: string;
+  author: string;
+}>;
+
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout pageTitle={frontmatter.title}>
+  <p>Written by {frontmatter.author}</p>
+  <slot />
+</BaseLayout>
