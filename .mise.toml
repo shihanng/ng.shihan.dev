@@ -1,4 +1,7 @@
 [tools]
 "aqua:google/yamlfmt" = "0.17.2"
 "aqua:pre-commit/pre-commit" = "4.2.0"
+"node" = "24"
+"npm:pnpm" = "latest-10"
+"npm:prettier" = "3.6.2"
 "ubi:tamasfe/taplo" = "0.10.0"
