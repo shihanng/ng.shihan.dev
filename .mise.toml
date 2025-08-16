@@ -1,0 +1,4 @@
+[tools]
+"aqua:google/yamlfmt" = "0.17.2"
+"aqua:pre-commit/pre-commit" = "4.2.0"
+"ubi:tamasfe/taplo" = "0.10.0"
