@@ -27,6 +27,7 @@
     "@astrojs/check": "^0.9.6",
     "@astrojs/ts-plugin": "^1.10.6",
     "@eslint/js": "^9.39.2",
+    "@tailwindcss/typography": "^0.5.19",
     "@taplo/cli": "^0.7.0",
     "@types/eslint-plugin-jsx-a11y": "^6.10.1",
     "@typescript-eslint/parser": "^8.53.0",
